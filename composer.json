@@ -1,0 +1,26 @@
+{
+    "name": "devchris/quickmetrics-laravel",
+    "description": "Laravel wrapper package for the Quickmetrics.io API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher O. N.",
+            "email": "engchris95@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^5.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devchris\\Quickmetrics\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devchris\\Quickmetrics\\QuickmetricsServiceProvider"
+            ]
+        }
+    }
+}

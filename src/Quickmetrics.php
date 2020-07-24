@@ -3,6 +3,7 @@
 namespace Devchris\Quickmetrics;
 
 use GuzzleHttp\Client;
+use Devchris\Quickmetrics\Config;
 use GuzzleHttp\Exception\GuzzleException;
 
 class Quickmetrics
@@ -10,6 +11,7 @@ class Quickmetrics
 
     public static function event(string $name, float $val, ?string $dimension = null)
     {
+        $config = new Config();
 
         $data = array(
             'name' => $name,
@@ -30,7 +32,7 @@ class Quickmetrics
                 'json' => $data,
                 'verify' => false,
                 'headers' => [
-                    'x-qm-key' => config('quickmetrics.key'),
+                    'x-qm-key' => $config->getQuickmetricsApiKey()
                 ],
             ]);
 

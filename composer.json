@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^5.1.0"
+        "guzzlehttp/guzzle": "^5.1.0",
+        "vlucas/phpdotenv": "^5.1"
     },
     "autoload": {
         "psr-4": {

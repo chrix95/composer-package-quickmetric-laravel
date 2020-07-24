@@ -10,9 +10,6 @@ class QuickmetricsServiceProvider extends ServiceProvider
 	{
 		// publish a config file
 		// users can add their own values to
-		$this->publishes([
-			__DIR__ . '/../config/quickmetrics.php' => config_path('quickmetrics.php')
-		]);
 	}
 	// extend functionality from other classes
 	// register service providers
